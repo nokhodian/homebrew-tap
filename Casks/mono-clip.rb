@@ -1,10 +1,10 @@
 cask "mono-clip" do
-  version "0.1.0"
-  sha256 "2567a9186caef11886c64c17d5eff90467169415fb8b534f470193142e496b45"
+  version "0.2.0"
+  sha256 "315d4d57339d52cba5d3d64e700413ca10ce45c7b3939bd2a1ee5c641c618592"
 
-  url "https://github.com/nokhodian/mono-clip/releases/download/v#{version}/MonoClip_#{version}_aarch64.dmg"
+  url "https://github.com/nokhodian/mono-clip/releases/download/v\#{version}/MonoClip_\#{version}_aarch64.dmg"
   name "MonoClip"
-  desc "Blazing-fast macOS clipboard manager with folder organization and global shortcuts"
+  desc "Blazing-fast macOS clipboard manager with folder organization, CLI, and AI integration"
   homepage "https://github.com/nokhodian/mono-clip"
 
   depends_on macos: ">= :ventura"
