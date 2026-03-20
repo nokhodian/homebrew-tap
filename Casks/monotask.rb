@@ -12,9 +12,10 @@ cask "monotask" do
   app "Monotask.app"
 
   caveats <<~EOS
-    Monotask is not code-signed. If macOS blocks it on first launch, run:
-      xattr -cr /Applications/Monotask.app
-    Then try opening it again.
+    Monotask is not code-signed. If macOS shows "damaged and can't be opened", run:
+      find /Applications/Monotask.app -print0 | xargs -0 xattr -c
+      codesign --force --deep --sign - /Applications/Monotask.app
+    Then open the app normally.
   EOS
 
   zap trash: [
